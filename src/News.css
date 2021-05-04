@@ -1,0 +1,22 @@
+.news {
+  margin-top: 20px;
+  height: 530px;
+  color: #6a5d5d;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  margin: 10px;
+  border-radius: 20px;
+  /* box-shadow: 0 0 8px -4px rgba(0,0,0,0.5); */
+
+}
+
+.news-img{
+  height: 50px;
+  width: 5px;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  border-image-width: center;
+}
