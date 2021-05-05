@@ -43,6 +43,7 @@ margin-bottom: 20px;
 .app__stats {
   display: flex;
   justify-content: space-between;
+  border-radius: 20px;
 }
 
 .app__graphTitle {
@@ -73,7 +74,6 @@ margin-bottom: 20px;
 }
 
 
-
 @media (max-width:990px) {
   .app {
     flex-direction: column;
@@ -85,6 +85,7 @@ margin-bottom: 20px;
 @media (max-width:590px) {
   .app__stats {
     flex-direction: column;
+    width: 100%;
   }
   .infobox{
     width: 100% !important;

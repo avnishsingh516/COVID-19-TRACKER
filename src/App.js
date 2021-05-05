@@ -9,6 +9,8 @@ import { sortData } from "./util.js";
 import Linegraph from "./Linegraph";
 import "leaflet/dist/leaflet.css";
 import News from "./News";
+import General from "./General";
+import Symptoms from "./Symptoms";
 
 function App() {
   const [countryInfo, setCountryInfo] = useState([]);
@@ -88,7 +90,7 @@ function App() {
         <div className="app__left">
           <div className="app__header">
             <h1>
-              <img src="https://raw.githubusercontent.com/maeeast/covid-tracker/master/favicon.ico" />{" "}
+              <img src="https://raw.githubusercontent.com/avnishsingh516/COVID-19-TRACKER/main/public/favicon.ico" />{" "}
               COVID-19 Tracker
             </h1>
 
@@ -155,6 +157,7 @@ function App() {
             updated={countryInfo.updated}
           />
         </div>
+
         <Card className="app__right">
           <CardContent>
             <h3>Live cases by country</h3>
@@ -174,17 +177,12 @@ function App() {
         </div>
         <div className="news app__right">
           <h2> COVID-19 Symptoms and precautions</h2>
-          <Typography
-            className="infobox__updated"
-            color="textSecondary"
-            align="centre"
-          >
-            COVID-19 Symptoms and precautions
-          </Typography>
+
           <br />
-          <br />
+          <General />
         </div>
       </div>
+    
     </div>
   );
 }
