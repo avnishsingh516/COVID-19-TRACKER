@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Card, CardContent } from "@material-ui/core";
-import { FormControl, Select, MenuItem, Typography } from "@material-ui/core";
+import { FormControl, Select, MenuItem } from "@material-ui/core";
 import "./App.css";
 import Infobox from "./Infobox";
 import Map from "./Map";
@@ -10,7 +10,6 @@ import Linegraph from "./Linegraph";
 import "leaflet/dist/leaflet.css";
 import News from "./News";
 import General from "./General";
-import Symptoms from "./Symptoms";
 import ForIndia from "./ForIndia";
 
 function App() {
@@ -30,7 +29,7 @@ function App() {
       await fetch("https://disease.sh/v3/covid-19/all")
         .then((response) => response.json())
         .then((data) => {
-          console.log(data);
+          // console.log(data);
           setCountryInfo(data);
         });
     };
@@ -66,7 +65,7 @@ function App() {
           setCountry(countryCode);
           let lat = data.countryInfo ? data.countryInfo.lat : 20;
           let long = data.countryInfo ? data.countryInfo.long : 70;
-          console.log(data);
+          // console.log(data);
           setmapCenter([lat, long]);
           setmapZoom(4);
         });
@@ -91,7 +90,10 @@ function App() {
         <div className="app__left">
           <div className="app__header">
             <h1>
-              <img src="https://raw.githubusercontent.com/avnishsingh516/COVID-19-TRACKER/main/public/favicon.ico" />{" "}
+              <img
+                src="https://raw.githubusercontent.com/avnishsingh516/COVID-19-TRACKER/main/public/favicon.ico"
+                alt=""
+              />
               COVID-19 Tracker
             </h1>
 

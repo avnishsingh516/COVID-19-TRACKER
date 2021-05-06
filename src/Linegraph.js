@@ -58,7 +58,7 @@ const constructChartData = (data, caseType = "cases") => {
     }
     lastDataPoint = data[caseType][date];
   }
-  console.log("chartData ", chartData);
+  // console.log("chartData ", chartData);
   return chartData;
 };
 const generateActiveCases = (data) => {
@@ -81,9 +81,9 @@ function Linegraph({ caseTypes = "cases" }) {
           if (caseTypes === "activecase") {
             let activeCases = generateActiveCases(data);
             data["active"] = activeCases;
-            console.log("active ", data);
+            // console.log("active ", data);
             caseTypes = "active";
-            //  return;
+            // return;
           }
           setData(constructChartData(data, caseTypes));
         });

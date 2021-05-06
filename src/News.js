@@ -29,7 +29,7 @@ function News() {
           return response.json();
         })
         .then((data) => {
-          console.log(data.articles);
+          // console.log(data.articles);
           const articles = data.articles.map((article) => ({
             title: article.title,
             image: article.urlToImage,

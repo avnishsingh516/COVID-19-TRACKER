@@ -4,7 +4,7 @@ import "./Infobox.css";
 import numeral from "numeral";
 
 function Infobox({ title, cases, total, onClick, active, caseType, updated }) {
-  console.log("cases ", cases);
+  // console.log("cases ", cases);
   return (
     <div
       onClick={onClick}
