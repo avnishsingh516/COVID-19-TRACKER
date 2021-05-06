@@ -174,7 +174,7 @@ function App() {
       </div>
       <div className="app__bottom">
         <div className=" news app__right">
-          <h2> WORLDWIDE NEWS REGARDING THE COVID-19</h2>
+          <h2> WORLDWIDE NEWS REGARDING COVID-19</h2>
 
           <News />
         </div>
@@ -184,16 +184,12 @@ function App() {
           <br />
           <General />
         </div>
-        <Card className="app__right">
-          <CardContent>
-            <h2> COVID-19 Resources For India !</h2>
-
-            <br />
-            <br />
-            <ForIndia />
-          </CardContent>
-        </Card>
       </div>
+      <Card className="app__right">
+        <CardContent>
+          <ForIndia />
+        </CardContent>
+      </Card>
     </div>
   );
 }

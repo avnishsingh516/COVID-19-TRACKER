@@ -5,6 +5,8 @@ import "./General.css";
 export default function ForIndia() {
   return (
     <div className=" btn">
+      <h4> COVID-19 Resources For India !</h4>
+      <br />
       <h4> Statewise Covid-19 resources are available. </h4>
       <br />
       <br />

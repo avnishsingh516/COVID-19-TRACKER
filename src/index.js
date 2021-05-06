@@ -6,7 +6,7 @@ import reportWebVitals from "./reportWebVitals";
 
 const Footer = () => (
   <footer className="footer">
-    <p>STAY HEALTHY & STAY SAFE !</p>
+    <h5>STAY HEALTHY & STAY SAFE !</h5>
   </footer>
 );
 
