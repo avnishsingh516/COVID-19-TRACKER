@@ -11,6 +11,7 @@ import "leaflet/dist/leaflet.css";
 import News from "./News";
 import General from "./General";
 import Symptoms from "./Symptoms";
+import ForIndia from "./ForIndia";
 
 function App() {
   const [countryInfo, setCountryInfo] = useState([]);
@@ -171,7 +172,7 @@ function App() {
       </div>
       <div className="app__bottom">
         <div className=" news app__right">
-          <h2>WORLDWIDE NEWS REGARDING THE COVID-19</h2>
+          <h2> WORLDWIDE NEWS REGARDING THE COVID-19</h2>
 
           <News />
         </div>
@@ -181,8 +182,16 @@ function App() {
           <br />
           <General />
         </div>
+        <Card className="app__right">
+          <CardContent>
+            <h2> COVID-19 Resources For India !</h2>
+
+            <br />
+            <br />
+            <ForIndia />
+          </CardContent>
+        </Card>
       </div>
-    
     </div>
   );
 }
