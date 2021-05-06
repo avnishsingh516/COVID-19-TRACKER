@@ -17,12 +17,8 @@ export default function ForIndia() {
         size="large"
         href="https://external.sprinklr.com/insights/explorer/dashboard/601b9e214c7a6b689d76f493/tab/1?id=DASHBOARD_601b9e214c7a6b689d76f493&tabId=1&home=1"
       >
-        Visit
+        Visit HERE
       </Button>
-      <br />
-      <br />
-      <br />
-      <h4>Thanks to Sprinklr !</h4>
     </div>
   );
 }
