@@ -174,7 +174,7 @@ function App() {
       </div>
       <div className="app__bottom">
         <div className=" news app__right">
-          <h2> WORLDWIDE NEWS REGARDING COVID-19</h2>
+          <h2> WORLDWIDE COVID-19 NEWS </h2>
 
           <News />
         </div>

@@ -14,29 +14,29 @@ import Typography from "@material-ui/core/Typography";
 const useStyles = makeStyles({
   root: {
     maxWidth: 355,
-    padding: 25,
+    padding: 20,
   },
 });
 
 function News() {
-  const [articles, setArticles] = useState([]);
+  const [results, setResults] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       await fetch(
-        "https://newsapi.org/v2/top-headlines?q=covid&sortBy=popularity&apiKey=25a8c25897a64c1799a190c65fe351f6"
+        "https://content.guardianapis.com/search?show-fields=thumbnail&q=covid&order-by=relevance&api-key=2b594032-7138-4866-b757-6bd4ed55f600"
       )
         .then((response) => {
           return response.json();
         })
         .then((data) => {
-          // console.log(data.articles);
-          const articles = data.articles.map((article) => ({
-            title: article.title,
-            image: article.urlToImage,
-            desc: article.description,
-            visit: article.url,
+          console.log(data.response.results);
+          const results = data.response.results.map((result) => ({
+            title: result.webTitle,
+            image: result.fields.thumbnail,
+
+            visit: result.webUrl,
           }));
-          setArticles(articles);
+          setResults(results);
         });
     };
     fetchData();
@@ -46,29 +46,29 @@ function News() {
 
   return (
     <div className="table">
-      {articles.map((article) => (
+      {results.map((result) => (
         <Card className={classes.root}>
           <CardActionArea>
             <CardMedia
               component="img"
-              height="120"
-              width="120"
-              image={article.image}
+              height="250"
+              width="80"
+              image={result.image}
             />
             <CardContent>
-              <Typography gutterBottom variant="h5" component="h3">
-                {article.title}
+              <Typography gutterBottom variant="p" component="h3">
+                {result.title}
               </Typography>
-              <Typography variant="body2" color="textSecondary" component="p">
-                {article.desc}
-              </Typography>
+              {/* <Typography variant="body2" color="textSecondary" component="p">
+                {result.title}
+              </Typography> */}
             </CardContent>
           </CardActionArea>
           <CardActions>
             <Button
               size="small"
               color="primary"
-              href={article.visit}
+              href={result.visit}
               variant="outlined"
             >
               VIEW
